@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_4M_06_KalkulatorWalut.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            >
+            <Label
+                Text="Kalkulator walut"
+                FontSize="32"
+                />
+
+
+
+            <Picker
+                x:Name="pckWaluta"
+                Title="Wybierz walutę"
+                SelectedIndexChanged="pckWalutaChanged">
+
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Euro</x:String>
+                        <x:String>Funt brytyjski</x:String>
+                        <x:String>Dolar amerykański</x:String>
+                        <x:String>Franek szwajcarski</x:String>
+                        <x:String>Korona czeska</x:String>
+                    </x:Array>
+
+
+                </Picker.ItemsSource>
+            </Picker>
+            
+            
+            
+            
+            
+            
+            <Label
+                Text="waluta:"
+                x:Name="lblWalutaInfo"
+                FontSize="18"
+                />
+            <HorizontalStackLayout Spacing="10">
+                <Label
+                    Text="kwota:"
+                    FontSize="24"
+                    />
+                <Entry
+                    FontSize="24"
+                    Text="0"
+                    x:Name="entKwota"
+                    WidthRequest="150"
+                    />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Spacing="20"
+               HorizontalOptions="Center">
+                <Button
+                    Text="Kupuję"
+                    Clicked="btnKupuje"
+                    WidthRequest="150"
+                    />
+                <Button
+                    Text="sprzedaję"
+                    Clicked="btnSprzedaje"
+                    WidthRequest="150"
+                    />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Spacing="10">
+                <Label
+                    Text=""
+                    FontSize="24"
+                    x:Name="lblWaluta"
+                    />
+            </HorizontalStackLayout>
+            
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
