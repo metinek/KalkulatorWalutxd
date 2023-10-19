@@ -54,26 +54,33 @@ public partial class KursWzrost : ContentPage
 {
     Waluta2 euro;
     Waluta2 usd;
+    Waluta2 chf;
     Waluta2 euro2;
     Waluta2 usd2;
+    Waluta2 chf2;
 
     public KursWzrost()
     {
         euro = new Waluta2("EUR", "2023-10-19");
         usd = new Waluta2("USD", "2023-10-19"); 
+        chf = new Waluta2("CHF", "2023-10-19"); 
 
         euro2 = new Waluta2("EUR", "2023-10-18");
         usd2 = new Waluta2("USD", "2023-10-18");
-        chf2 = new Waluta2("EUR", "2023-10-18");
+        chf2 = new Waluta2("CHF", "2023-10-18");
         InitializeComponent();
 
         eurLbl.Text = euro.kodWaluty;
-        kupnoEURLbl.Text = euro.skup.ToString();
-        sprzedazEURLbl.Text = euro.sprzedaz.ToString();
+        kupnoEURLbl.Text = Math.Round(euro.skup, 3).ToString();
+        sprzedazEURLbl.Text = Math.Round(euro.sprzedaz,3).ToString();
 
         usdLbl.Text = usd.kodWaluty;
-        kupnoUSDLbl.Text = usd.skup.ToString();
-        sprzedazUSDLbl.Text = usd.sprzedaz.ToString();
+        kupnoUSDLbl.Text = Math.Round(usd.skup,3).ToString();
+        sprzedazUSDLbl.Text = Math.Round(usd.sprzedaz,3).ToString();
+
+        chfLbl.Text = chf.kodWaluty;
+        kupnoCHFLbl.Text = Math.Round(chf.skup,3).ToString();
+        sprzedazCHFLbl.Text = Math.Round(chf.sprzedaz,3).ToString();
 
 
 
@@ -92,6 +99,9 @@ public partial class KursWzrost : ContentPage
         else wzrostsprzedazEURImg.Source = "w1.png";
 
 
+
+
+
         if (usd.sprzedaz - usd2.sprzedaz > 0) wzrostkupnoUSDImg.Source = "w2.png";
         else if (usd.sprzedaz - usd2.sprzedaz < 0) wzrostkupnoUSDImg.Source = "w0.png";
         else wzrostkupnoUSDImg.Source = "w1.png";
@@ -100,6 +110,24 @@ public partial class KursWzrost : ContentPage
         if (usd.skup - usd2.skup > 0) wzrostsprzedazUSDImg.Source = "w2.png";
         else if (usd.skup - usd2.skup < 0) wzrostsprzedazUSDImg.Source = "w0.png";
         else wzrostsprzedazUSDImg.Source = "w1.png";
+
+
+
+
+
+        if (chf.sprzedaz - chf2.sprzedaz > 0) wzrostkupnoCHFImg.Source = "w2.png";
+        else if (chf.sprzedaz - chf2.sprzedaz < 0) wzrostkupnoCHFImg.Source = "w0.png";
+        else wzrostkupnoCHFImg.Source = "w1.png";
+
+
+        if (chf.skup - chf2.skup > 0) wzrostsprzedazCHFImg.Source = "w2.png";
+        else if (chf.skup - chf2.skup < 0) wzrostsprzedazCHFImg.Source = "w0.png";
+        else wzrostsprzedazCHFImg.Source = "w1.png";
+
+
+
+
+
 
 
 

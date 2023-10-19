@@ -42,8 +42,28 @@
             <Label
                 x:Name="sprzedazUSDLbl"/>
         </HorizontalStackLayout>
-        
-        
+
+
+        <HorizontalStackLayout 
+            Spacing="10">
+            <Label 
+                x:Name="chfLbl"
+                FontAttributes="Bold"/>
+            <Image
+                x:Name="wzrostsprzedazCHFImg"
+                WidthRequest="50"/>
+            <Label
+                x:Name="kupnoCHFLbl"/>
+            <Image
+                x:Name="wzrostkupnoCHFImg"
+                WidthRequest="50"/>
+            <Label
+                x:Name="sprzedazCHFLbl"/>
+        </HorizontalStackLayout>
+
+
+
+
     </VerticalStackLayout>
 
 
