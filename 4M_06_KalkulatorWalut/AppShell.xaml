@@ -6,10 +6,19 @@
     xmlns:local="clr-namespace:_4M_06_KalkulatorWalut"
     Shell.FlyoutBehavior="Disabled">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="NewPage1" />
-    
+    <FlyoutItem>
+        <Tab>
+            <ShellContent
+                Title="Kalkulator Walut"
+                ContentTemplate="{DataTemplate local:MainPage}"
+                Route="MainPage"/>
+
+            <ShellContent
+                Title="Wzrosty i Spadki"
+                ContentTemplate="{DataTemplate local:KursWzrost}"
+                Route="KursWzrost"/>
+        </Tab>
+
+    </FlyoutItem>
 
 </Shell>

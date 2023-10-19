@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_4M_06_KalkulatorWalut.KursWzrost"
+             Title="KursWzrost">
+
+    <VerticalStackLayout 
+        HorizontalOptions="Center"
+        Margin="30">
+        <HorizontalStackLayout 
+            Spacing="10">
+            <Label
+                x:Name="eurLbl"
+                FontAttributes="Bold"/>
+            <Image
+                x:Name="wzrostsprzedazEURImg"
+                WidthRequest="50"/>
+            <Label
+                x:Name="kupnoEURLbl"/>
+            <Image
+                x:Name="wzrostkupnoEURImg"
+                WidthRequest="50"/>
+            <Label
+                x:Name="sprzedazEURLbl"/>
+        </HorizontalStackLayout>
+
+
+
+        <HorizontalStackLayout 
+            Spacing="10">
+            <Label 
+                x:Name="usdLbl"
+                FontAttributes="Bold"/>
+            <Image
+                x:Name="wzrostsprzedazUSDImg"
+                WidthRequest="50"/>
+            <Label
+                x:Name="kupnoUSDLbl"/>
+            <Image
+                x:Name="wzrostkupnoUSDImg"
+                WidthRequest="50"/>
+            <Label
+                x:Name="sprzedazUSDLbl"/>
+        </HorizontalStackLayout>
+        
+        
+    </VerticalStackLayout>
+
+
+</ContentPage>
