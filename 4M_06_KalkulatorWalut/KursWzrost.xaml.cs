@@ -27,8 +27,7 @@ class Waluta2
 
 
 
-
-    public void pobierzDane(string waluta = "EUR", string date = "2023-10-19")
+        public void pobierzDane(string waluta = "EUR", string date = "2023-10-19")
     {
         string url = "http://api.nbp.pl/api/exchangerates/rates/c/" + waluta + "/"+ date +"/?format=json";
         string wynik;
@@ -61,13 +60,14 @@ public partial class KursWzrost : ContentPage
 
     public KursWzrost()
     {
-        euro = new Waluta2("EUR", "2023-10-19");
-        usd = new Waluta2("USD", "2023-10-19"); 
-        chf = new Waluta2("CHF", "2023-10-19"); 
+        string dzisiaj = DateTime.Now.ToString("yyyy-MM-dd"), wczoraj = (DateTime.Today.AddDays(-1)).ToString("yyyy-MM-dd");
+        euro = new Waluta2("EUR", dzisiaj);
+        usd = new Waluta2("USD", dzisiaj); 
+        chf = new Waluta2("CHF", dzisiaj); 
 
-        euro2 = new Waluta2("EUR", "2023-10-18");
-        usd2 = new Waluta2("USD", "2023-10-18");
-        chf2 = new Waluta2("CHF", "2023-10-18");
+        euro2 = new Waluta2("EUR", wczoraj);
+        usd2 = new Waluta2("USD", wczoraj);
+        chf2 = new Waluta2("CHF", wczoraj);
         InitializeComponent();
 
         eurLbl.Text = euro.kodWaluty;
